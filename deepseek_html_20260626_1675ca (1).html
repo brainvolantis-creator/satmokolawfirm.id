@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satmoko Group · Techno-Legal Architect for RWA Tokenization</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <style>
+        /* ---------- RESET & BASE ---------- */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #0A1F44;
+            --navy-light: #132d5e;
+            --gold: #C9A227;
+            --gold-light: #e0b83a;
+            --gold-pale: #f5edc4;
+            --white: #FFFFFF;
+            --off-white: #f8f6f0;
+            --gray: #6b7a8f;
+            --radius: 12px;
+            --shadow: 0 20px 60px rgba(10, 31, 68, 0.12);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--white);
+            color: #1e293b;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* ---------- BUTTONS ---------- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.85rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            background: var(--gold);
+            color: var(--navy);
+            box-shadow: 0 4px 16px rgba(201, 162, 39, 0.3);
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(201, 162, 39, 0.4);
+            background: var(--gold-light);
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            box-shadow: none;
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--gold);
+            color: var(--gold);
+            box-shadow: none;
+        }
+        .btn-navy {
+            background: var(--navy);
+            color: var(--white);
+            box-shadow: 0 4px 16px rgba(10, 31, 68, 0.3);
+        }
+        .btn-navy:hover {
+            background: var(--navy-light);
+            box-shadow: 0 8px 28px rgba(10, 31, 68, 0.35);
+        }
+
+        /* ---------- TYPOGRAPHY ---------- */
+        .section-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            background: var(--gold-pale);
+            padding: 0.25rem 1rem;
+            border-radius: 50px;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4.5vw, 3.2rem);
+            font-weight: 700;
+            line-height: 1.15;
+            color: var(--navy);
+            letter-spacing: -0.02em;
+        }
+        .section-title span {
+            color: var(--gold);
+        }
+
+        .section-sub {
+            font-size: 1.1rem;
+            color: var(--gray);
+            max-width: 640px;
+            margin-top: 0.75rem;
+            line-height: 1.7;
+        }
+
+        .text-gold {
+            color: var(--gold);
+        }
+        .text-navy {
+            color: var(--navy);
+        }
+        .text-center {
+            text-align: center;
+        }
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ---------- HEADER / HERO ---------- */
+        #hero {
+            background: var(--navy);
+            color: var(--white);
+            padding: 3rem 0 4.5rem;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        #hero::after {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -20%;
+            width: 70%;
+            height: 120%;
+            background: radial-gradient(ellipse, rgba(201, 162, 39, 0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        #hero .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(201, 162, 39, 0.15);
+            border: 1px solid rgba(201, 162, 39, 0.25);
+            padding: 0.35rem 1.2rem 0.35rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--gold);
+            letter-spacing: 0.02em;
+            margin-bottom: 1.5rem;
+        }
+        .hero-badge .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gold);
+            animation: pulse-dot 2s infinite;
+        }
+        @keyframes pulse-dot {
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.3);
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(2.4rem, 7vw, 4.6rem);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            max-width: 900px;
+        }
+        .hero-title .gold {
+            color: var(--gold);
+        }
+        .hero-title .gold-light {
+            color: var(--gold-light);
+        }
+
+        .hero-desc {
+            font-size: clamp(1rem, 1.4vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 640px;
+            margin-top: 1.25rem;
+            line-height: 1.8;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .hero-stats .stat-num {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: -0.02em;
+        }
+        .hero-stats .stat-label {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.55);
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        /* ---------- SECTION COMMON ---------- */
+        section {
+            padding: 4.5rem 0;
+        }
+        section:nth-child(even) {
+            background: var(--off-white);
+        }
+
+        /* ---------- EKOSISTEM ---------- */
+        #ekosistem .diagram-wrap {
+            margin-top: 2.5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .eco-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 1.8rem 2rem;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--gold);
+            transition: var(--transition);
+        }
+        .eco-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 28px 72px rgba(10, 31, 68, 0.10);
+        }
+        .eco-card .role {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--gold);
+            margin-bottom: 0.2rem;
+        }
+        .eco-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+        .eco-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-top: 0.4rem;
+        }
+        .eco-card .tool {
+            display: inline-block;
+            margin-top: 0.6rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: var(--gold-pale);
+            color: var(--navy);
+            padding: 0.2rem 1rem;
+            border-radius: 50px;
+        }
+
+        .diagram-connector {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.4rem;
+            color: var(--gold);
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            padding: 0.2rem 0;
+        }
+
+        /* ---------- LAYANAN SATMOKO ---------- */
+        #layanan .layanan-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .layanan-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 1.8rem 2rem;
+            box-shadow: var(--shadow);
+            border-bottom: 4px solid var(--gold);
+            transition: var(--transition);
+        }
+        .layanan-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 24px 64px rgba(10, 31, 68, 0.10);
+        }
+        .layanan-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--navy);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .layanan-card h3 .icon {
+            font-size: 1.8rem;
+        }
+        .layanan-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+            line-height: 1.7;
+        }
+        .layanan-card ul {
+            list-style: none;
+            margin-top: 0.8rem;
+        }
+        .layanan-card ul li {
+            padding: 0.2rem 0 0.2rem 1.4rem;
+            position: relative;
+            font-size: 0.9rem;
+            color: #334155;
+        }
+        .layanan-card ul li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* ---------- ARSIVA ---------- */
+        #arsiva .arsiva-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            margin-top: 2rem;
+            align-items: center;
+        }
+
+        .arsiva-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .arsiva-features .feat {
+            background: var(--white);
+            border-radius: 10px;
+            padding: 1rem 1.2rem;
+            box-shadow: 0 2px 12px rgba(10, 31, 68, 0.05);
+            border: 1px solid #edf0f5;
+        }
+        .arsiva-features .feat .num {
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+        .arsiva-features .feat .label {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--navy);
+        }
+        .arsiva-features .feat .desc {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-top: 0.2rem;
+        }
+
+        .arsiva-quote {
+            background: var(--navy);
+            color: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem 2.2rem;
+            margin-top: 1.5rem;
+            position: relative;
+        }
+        .arsiva-quote::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--gold);
+            opacity: 0.25;
+            position: absolute;
+            top: -0.2rem;
+            left: 1rem;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        .arsiva-quote p {
+            font-size: 1.05rem;
+            font-weight: 400;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+            padding-left: 1.5rem;
+        }
+        .arsiva-quote .cite {
+            display: block;
+            margin-top: 0.75rem;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+            padding-left: 1.5rem;
+        }
+
+        /* ---------- LEGAL FRAMEWORK ---------- */
+        #legal-framework .framework-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .fw-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 1.8rem 2rem;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--gold);
+        }
+        .fw-card .flag {
+            font-size: 1.6rem;
+            margin-right: 0.5rem;
+        }
+        .fw-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .fw-card ul {
+            list-style: none;
+            margin-top: 0.8rem;
+        }
+        .fw-card ul li {
+            padding: 0.3rem 0 0.3rem 1.6rem;
+            position: relative;
+            font-size: 0.92rem;
+            color: #334155;
+        }
+        .fw-card ul li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* ---------- CONTACT ---------- */
+        #contact {
+            background: var(--navy);
+            color: var(--white);
+            padding: 4rem 0 5rem;
+        }
+        #contact .section-title {
+            color: var(--white);
+        }
+        #contact .section-sub {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+        .contact-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: var(--radius);
+            padding: 1.8rem 2rem;
+            backdrop-filter: blur(4px);
+        }
+        .contact-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+        .contact-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+        .contact-card .cta-big {
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--gold);
+            border-bottom: 2px solid rgba(201, 162, 39, 0.25);
+            padding-bottom: 0.2rem;
+            transition: var(--transition);
+        }
+        .contact-card .cta-big:hover {
+            border-color: var(--gold);
+            color: var(--gold-light);
+        }
+        .contact-card .meta {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 0.5rem;
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            background: #060f24;
+            color: rgba(255, 255, 255, 0.5);
+            padding: 2rem 0;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        footer .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+        }
+        footer .brand {
+            font-weight: 600;
+            color: var(--white);
+            letter-spacing: 0.02em;
+        }
+        footer .brand .gold {
+            color: var(--gold);
+        }
+        footer .legal {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        /* ---------- PLACEHOLDER IMG ---------- */
+        .placeholder-img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: var(--navy);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            text-transform: uppercase;
+            overflow: hidden;
+        }
+        .placeholder-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (min-width: 640px) {
+            .eco-card {
+                padding: 2rem 2.5rem;
+            }
+            .arsiva-features {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .framework-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .framework-grid .fw-card:last-child {
+                grid-column: 1 / -1;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .layanan-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .layanan-grid .layanan-card:last-child {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            #hero {
+                padding: 4rem 0 6rem;
+            }
+            .hero-stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            #ekosistem .diagram-wrap {
+                grid-template-columns: 1fr 0.1fr 1fr 0.1fr 1fr;
+                align-items: stretch;
+            }
+            .diagram-connector {
+                flex-direction: column;
+                padding: 0 0.2rem;
+                font-size: 1.8rem;
+            }
+            .arsiva-grid {
+                grid-template-columns: 3fr 2fr;
+            }
+            .framework-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .framework-grid .fw-card:last-child {
+                grid-column: auto;
+            }
+            .contact-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .layanan-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .layanan-grid .layanan-card:last-child {
+                grid-column: auto;
+            }
+            footer .container {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            .arsiva-features {
+                grid-template-columns: 1fr 1fr;
+            }
+            .arsiva-features .feat {
+                padding: 0.8rem 1rem;
+            }
+            .eco-card {
+                padding: 1.2rem 1.2rem;
+            }
+            .fw-card {
+                padding: 1.2rem 1.2rem;
+            }
+            .contact-card {
+                padding: 1.2rem 1.2rem;
+            }
+            .layanan-card {
+                padding: 1.2rem 1.2rem;
+            }
+            .arsiva-quote {
+                padding: 1.5rem 1.2rem;
+            }
+            .arsiva-quote p {
+                padding-left: 0.5rem;
+                font-size: 0.95rem;
+            }
+            .arsiva-quote::before {
+                font-size: 2.8rem;
+                left: 0.5rem;
+            }
+            .section-title {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HERO ========== -->
+    <header id="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Full-Stack Compliance Navigator · Indonesia · Singapore · Dubai
+            </div>
+            <h1 class="hero-title">
+                Satmoko Group:<br />
+                <span class="gold">Techno-Legal Architect</span><br />
+                <span class="gold-light">for RWA Tokenization</span>
+            </h1>
+            <p class="hero-desc">
+                We architect the legal infrastructure that converts Indonesia's
+                <strong>USD 1.4 trillion</strong> in dead capital into live,
+                globally tradable digital assets — with absolute regulatory certainty.
+            </p>
+            <div class="hero-actions">
+                <a href="#contact" class="btn">Request RWA Architecture Consultation</a>
+                <a href="#arsiva" class="btn btn-outline">Explore ARSIVA AI</a>
+            </div>
+
+            <div class="hero-stats">
+                <div>
+                    <div class="stat-num">3</div>
+                    <div class="stat-label">Jurisdictions</div>
+                </div>
+                <div>
+                    <div class="stat-num">&lt;5s</div>
+                    <div class="stat-label">Document Retrieval</div>
+                </div>
+                <div>
+                    <div class="stat-num">100%</div>
+                    <div class="stat-label">Data Accuracy</div>
+                </div>
+                <div>
+                    <div class="stat-num">2019</div>
+                    <div class="stat-label">Founded</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== EKOSISTEM ========== -->
+    <section id="ekosistem">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Corporate Architecture</span>
+                <h2 class="section-title">Three Entities · <span>One Unified</span> Ecosystem</h2>
+                <p class="section-sub mx-auto">
+                    Our tripartite structure integrates asset management, legal compliance,
+                    and AI-driven governance — purpose-built for cross-border RWA tokenization.
+                </p>
+            </div>
+
+            <div class="diagram-wrap">
+                <!-- PT SPV Indonesia -->
+                <div class="eco-card">
+                    <div class="role">Entity 1 · Asset Management</div>
+                    <h3>PT SPV Indonesia</h3>
+                    <p>Holds legal title to underlying real-world assets. Manages physical certificates, valuation, and on-chain proof of reserve.</p>
+                    <span class="tool">Tool: ARSIVA AI</span>
+                </div>
+
+                <div class="diagram-connector">⟷</div>
+
+                <!-- SPV-SG -->
+                <div class="eco-card">
+                    <div class="role">Entity 2 · Holding &amp; Issuer</div>
+                    <h3>SPV-SG</h3>
+                    <p>Singapore-incorporated holding company and token issuer. Leverages ID-SG DTT for tax efficiency and MAS-compliant distribution.</p>
+                    <span class="tool">Jurisdiction: Singapore</span>
+                </div>
+
+                <div class="diagram-connector">⟷</div>
+
+                <!-- Satmoko Law Firm -->
+                <div class="eco-card" style="border-left-color: #0A1F44;">
+                    <div class="role">Entity 3 · Techno-Legal Architect</div>
+                    <h3>Satmoko Law Firm</h3>
+                    <p>Full-Stack Compliance Navigator bridging OJK, MAS, and VARA. Architects the Legal Wrapper, SPV governance, and cross-border interoperability.</p>
+                    <span class="tool">Tool: ARSIVA AI · Legal Wrapper</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; padding: 1.5rem; background: var(--gold-pale); border-radius: var(--radius); text-align: center; font-size: 0.95rem; color: var(--navy);">
+                <strong>⏤ ARSIVA AI</strong> is the core technology powering both PT SPV Indonesia and Satmoko Law Firm —
+                the <strong>foundation for the enterprise RWA tokenization platform</strong>.
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LAYANAN SATMOKO LAW FIRM ========== -->
+    <section id="layanan">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Layanan Hukum</span>
+                <h2 class="section-title">Corporate &amp; <span>Investment</span> Legal Services</h2>
+                <p class="section-sub mx-auto">
+                    Satmoko Law Firm menyediakan layanan hukum korporasi dan investasi yang komprehensif,
+                    didukung oleh keahlian tekno-legal dan kepatuhan lintas yurisdiksi.
+                </p>
+            </div>
+
+            <div class="layanan-grid">
+                <!-- Corporate & Business Law -->
+                <div class="layanan-card">
+                    <h3><span class="icon">🏢</span> Corporate &amp; Business Law</h3>
+                    <p>Pendampingan hukum menyeluruh untuk siklus hidup korporasi, mulai dari pendirian, pengelolaan, hingga kepatuhan berkelanjutan.</p>
+                    <ul>
+                        <li>Pendirian PT, PMA, dan koperasi</li>
+                        <li>Penyusunan anggaran dasar &amp; perubahan</li>
+                        <li>Kontrak bisnis (kerjasama, distribusi, keagenan)</li>
+                        <li>Kepatuhan OSS-RBA, NIB, dan izin usaha</li>
+                        <li>Penyelesaian sengketa korporasi</li>
+                    </ul>
+                </div>
+
+                <!-- Trade & Finance Investment -->
+                <div class="layanan-card">
+                    <h3><span class="icon">📊</span> Trade &amp; Finance Investment</h3>
+                    <p>Keahlian dalam transaksi perdagangan, pembiayaan, dan investasi — baik domestik maupun lintas negara.</p>
+                    <ul>
+                        <li>Struktur pembiayaan korporasi (utang, ekuitas, mezzanine)</li>
+                        <li>Perjanjian pinjaman &amp; jaminan (fidusia, hipotek)</li>
+                        <li>Investasi asing langsung (PMA) &amp; divestasi</li>
+                        <li>Trade finance (LC, SKBDN, factoring)</li>
+                        <li>Kepatuhan BKPM, OJK, dan BI</li>
+                    </ul>
+                </div>
+
+                <!-- Merger & Acquisition -->
+                <div class="layanan-card">
+                    <h3><span class="icon">⚖️</span> Merger &amp; Acquisition</h3>
+                    <p>Panduan strategis dan legal untuk transaksi M&amp;A, dari due diligence hingga integrasi pasca-akuisisi.</p>
+                    <ul>
+                        <li>Due diligence legal &amp; finansial</li>
+                        <li>Struktur akuisisi (share deal, asset deal)</li>
+                        <li>Perjanjian jual-beli saham/aset</li>
+                        <li>Notifikasi ke KPPU &amp; otoritas terkait</li>
+                        <li>Integrasi pasca-merger &amp; harmonisasi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ARSIVA ========== -->
+    <section id="arsiva">
+        <div class="container">
+            <span class="section-tag">Core Technology</span>
+            <h2 class="section-title">ARSIVA AI · <span>Smart Archive</span> Intelligence</h2>
+            <p class="section-sub">
+                From passive document stacks to active, queryable intelligence — in under 5 seconds.
+                Battle-tested in real RWA tokenization projects across Indonesia and Singapore.
+            </p>
+
+            <div class="arsiva-grid">
+                <div>
+                    <div class="arsiva-features">
+                        <div class="feat">
+                            <div class="num">&lt;5s</div>
+                            <div class="label">Retrieval</div>
+                            <div class="desc">vs. 15–30 min manual</div>
+                        </div>
+                        <div class="feat">
+                            <div class="num">100%</div>
+                            <div class="label">Accuracy</div>
+                            <div class="desc">Zero hallucination</div>
+                        </div>
+                        <div class="feat">
+                            <div class="num">🔒</div>
+                            <div class="label">Local/Cloud</div>
+                            <div class="desc">Deploy on-prem or cloud</div>
+                        </div>
+                        <div class="feat">
+                            <div class="num">📜</div>
+                            <div class="label">Audit Trail</div>
+                            <div class="desc">OJK/MAS ready</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1.2rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                        <span style="background: var(--gold-pale); padding: 0.2rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; color: var(--navy);">RAG Pipeline</span>
+                        <span style="background: var(--gold-pale); padding: 0.2rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; color: var(--navy);">Knowledge Graph</span>
+                        <span style="background: var(--gold-pale); padding: 0.2rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; color: var(--navy);">ERC-3643 Ready</span>
+                        <span style="background: var(--gold-pale); padding: 0.2rem 1rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; color: var(--navy);">Zero Cloud Transfer</span>
+                    </div>
+
+                    <div class="arsiva-quote">
+                        <p>
+                            ARSIVA transforms physical certificates, AJB deeds, and legal
+                            contracts into an intelligent, queryable knowledge base —
+                            the compliance backbone for tokenized asset governance.
+                        </p>
+                        <span class="cite">— Lawinvesto · Tokenomics Division</span>
+                    </div>
+                </div>
+
+                <div class="placeholder-img">
+                    <img src="https://placehold.co/600x400/0A1F44/FFFFFF?text=ARSIVA+AI+%7C+Smart+Archive+Intelligence" alt="ARSIVA AI" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LEGAL FRAMEWORK ========== -->
+    <section id="legal-framework">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Regulatory Mastery</span>
+                <h2 class="section-title">Three Jurisdictions · <span>One</span> Modular Legal Wrapper</h2>
+                <p class="section-sub mx-auto">
+                    Our proprietary framework ensures simultaneous compliance with OJK, MAS,
+                    and VARA — eliminating the need for jurisdiction-specific rebuilds.
+                </p>
+            </div>
+
+            <div class="framework-grid">
+                <!-- Indonesia -->
+                <div class="fw-card">
+                    <h4><span class="flag">🇮🇩</span> Indonesia · OJK</h4>
+                    <ul>
+                        <li>POJK 57/2020 · Securities Crowdfunding (STO framework)</li>
+                        <li>POJK 27/2024 · Digital Financial Asset licensing</li>
+                        <li>POJK 3/2024 · Regulatory Sandbox (binary pass/fail)</li>
+                        <li>UU P2SK · Consolidated digital asset oversight (Jan 2025)</li>
+                        <li>UU PDP · Data protection compliance</li>
+                    </ul>
+                </div>
+
+                <!-- Singapore -->
+                <div class="fw-card">
+                    <h4><span class="flag">🇸🇬</span> Singapore · MAS</h4>
+                    <ul>
+                        <li>SFA 2001 · Tokenized CMPs regulated as securities</li>
+                        <li>PSA 2019 · Digital payment token services</li>
+                        <li>FAA 2001 · Financial advisory licensing</li>
+                        <li>FATF Travel Rule · AML/CFT enforcement</li>
+                        <li>ID-SG DTT · 10% WHT on dividends</li>
+                    </ul>
+                </div>
+
+                <!-- Dubai -->
+                <div class="fw-card">
+                    <h4><span class="flag">🇦🇪</span> Dubai · VARA 2.0</h4>
+                    <ul>
+                        <li>VARA 2.0 (May 2025) · World's most advanced RWA framework</li>
+                        <li>RWA tokens classified as ARVAs</li>
+                        <li>Dubai Land Department · USD 16B target by 2033</li>
+                        <li>9% CIT · 0% on qualifying foreign income</li>
+                        <li>DIFC/DFSA · Common law jurisdiction for smart contracts</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; padding: 1.8rem; background: var(--navy); border-radius: var(--radius); color: var(--white);">
+                <div style="display: flex; align-items: flex-start; gap: 1rem; flex-wrap: wrap;">
+                    <span style="font-size: 2rem; line-height: 1;">⚖️</span>
+                    <div>
+                        <strong style="color: var(--gold);">The Modular Legal Wrapper</strong>
+                        <p style="margin-top: 0.3rem; font-size: 0.95rem; color: rgba(255,255,255,0.7);">
+                            A single tokenization structure that is simultaneously investable by Indonesian,
+                            Singaporean, and Emirati investors — without rebuilding documentation for each market.
+                            Common core: Indonesian SPV · Indonesia Layer: OJK · Singapore Layer: MAS · Dubai Layer: VARA.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag" style="background: rgba(201,162,39,0.15); color: var(--gold);">Engage</span>
+                <h2 class="section-title">Request <span>RWA Architecture</span> Consultation</h2>
+                <p class="section-sub mx-auto" style="color: rgba(255,255,255,0.6);">
+                    Structural errors have a price. The first consultation does not.
+                    Let's architect your tokenization foundation with absolute certainty.
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>📋 Demo &amp; Assessment</h4>
+                    <p>See ARSIVA AI work on your actual documents. 3-day free trial with zero obligation.</p>
+                    <a href="#" class="cta-big">Schedule Demo →</a>
+                </div>
+
+                <div class="contact-card">
+                    <h4>🏛️ SPV &amp; Legal Structuring</h4>
+                    <p>From asset due diligence to SPV formation, Legal Wrapper, and OJK/MAS/VARA alignment.</p>
+                    <a href="#" class="cta-big">Start Structuring →</a>
+                </div>
+
+                <div class="contact-card">
+                    <h4>📞 Direct Contact</h4>
+                    <p style="font-size: 1.1rem; font-weight: 500; color: var(--white);">+65 8017 4461</p>
+                    <p style="font-size: 0.9rem;">Epicentrum Walk, Jakarta · lawinvesto.com</p>
+                    <div class="meta">Satmoko Law Firm · NIB: 8 March 2021</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2.5rem; text-align: center; padding: 1.5rem; border-radius: var(--radius); border: 1px dashed rgba(255,255,255,0.1);">
+                <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5);">
+                    <strong style="color: var(--gold);">Lawinvesto</strong> · Legal Architecture for Real World Asset Tokenization
+                    <span style="display: inline-block; margin: 0 0.75rem;">·</span>
+                    Full-Stack Compliance Navigator
+                    <span style="display: inline-block; margin: 0 0.75rem;">·</span>
+                    Since 2019
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div>
+                <span class="brand">Satmoko <span class="gold">Group</span></span>
+                <span style="display: inline-block; margin-left: 0.75rem; font-size: 0.75rem; color: rgba(255,255,255,0.25);">|</span>
+                <span style="font-size: 0.8rem;">Techno-Legal Architect for RWA Tokenization</span>
+            </div>
+            <div class="legal">
+                © 2026 Satmoko Law Firm · All Rights Reserved.
+                <span style="display: inline-block; margin: 0 0.5rem;">·</span>
+                Indonesia · Singapore · Dubai
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JS ========== -->
+    <script>
+        // Smooth anchor scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Simple intersection observer for fade-in (optional enhancement)
+        if ('IntersectionObserver' in window) {
+            const cards = document.querySelectorAll('.eco-card, .fw-card, .contact-card, .arsiva-features .feat, .layanan-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.08 });
+
+            cards.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(18px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(el);
+            });
+        }
+    </script>
+
+</body>
+</html>
