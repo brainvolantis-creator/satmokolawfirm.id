@@ -1,391 +1,291 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satmoko Law Firm | CLO Anstalt Legal & Investment Counsel</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Satmoko Law Firm | Techno Legal Architect untuk RWA, SBLC & Corporate Law Jakarta</title>
+<meta name="description" content="Satmoko Law Firm — Techno Legal Architect di Jakarta. Spesialis RWA Legal Indonesia, SBLC Legal Consultant, Financial Instrument Advisory, dan Case Management OS untuk Bank, BUMN, dan Investor.">
+<meta name="keywords" content="RWA Legal Indonesia, SBLC Legal Consultant, Law Firm Jakarta, Financial Instrument Advisory, POJK 27, UCP 600">
+<link rel="canonical" href="https://satmokolawfirm.id/index.html">
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background-color: #0A1F2E;
-            color: #FFFFFF;
-            line-height: 1.6;
-        }
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Satmoko Law Firm">
+<meta property="og:title" content="Satmoko Law Firm | Techno Legal Architect untuk RWA, SBLC & Corporate Law">
+<meta property="og:description" content="Menjembatani Hukum, Keuangan, dan Teknologi. Spesialis RWA Tokenization, Financial Instrument Advisory, dan Case Management OS.">
+<meta property="og:url" content="https://satmokolawfirm.id/index.html">
+<meta property="og:locale" content="id_ID">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 
-        section {
-            padding: 80px 0;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: #D4AF37;
-        }
-
-        p {
-            font-size: 1rem;
-            margin-bottom: 16px;
-            line-height: 1.8;
-            color: #FFFFFF;
-        }
-
-        .subheadline {
-            font-size: 1.25rem;
-            margin-bottom: 40px;
-            line-height: 1.5;
-            color: #FFFFFF;
-            font-weight: 300;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: #D4AF37;
-            color: #0A1F2E;
-            padding: 16px 40px;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 4px;
-            margin-top: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #FFFFFF;
-            color: #0A1F2E;
-        }
-
-        /* HERO SECTION */
-        #hero {
-            padding: 120px 0;
-            display: flex;
-            align-items: center;
-            gap: 60px;
-        }
-
-        .hero-content {
-            flex: 1;
-        }
-
-.hero-image {
-    flex: 1;
-    aspect-ratio: 4/5;
-    background: #0f1a2b;
-    border: 1px solid #D4AF37;
-    overflow: hidden;
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Satmoko Law Firm",
+  "alternateName": "Techno Legal Architect",
+  "url": "https://satmokolawfirm.id/index.html",
+  "email": "contact@satmokolawfirm.id",
+  "telephone": "+6285692904399",
+  "areaServed": "ID",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jakarta",
+    "addressCountry": "ID"
+  },
+  "priceRange": "$$$",
+  "knowsAbout": ["RWA Tokenization Law", "Standby Letter of Credit", "Bank Guarantee", "Corporate Law", "POJK 27/2024", "UCP 600"]
 }
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-        /* BOARD SECTION */
-        #board {
-            background-color: #0A1F2E;
-        }
-
-        .board-heading {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .board-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .board-card {
-            background-color: rgba(212, 175, 55, 0.05);
-            border: 1px solid #D4AF37;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .board-card-image {
-            aspect-ratio: 4/5;
-            background-color: rgba(212, 175, 55, 0.1);
-            border: 1px solid #D4AF37;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            color: #D4AF37;
-            margin-bottom: 30px;
-        }
-.board-card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* BIAR FOTO GAK KEPOTONG */
-  background: #0f1a2b; /* BACKGROUND EMAS GELAP */
-}
-        .board-card h3 {
-            margin-bottom: 8px;
-        }
-
-        .board-card p {
-            font-size: 0.95rem;
-            margin-bottom: 12px;
-        }
-
-        /* STRUCTURE SECTION */
-        #structure {
-            background-color: #0A1F2E;
-        }
-
-        .structure-disclaimer {
-            text-align: center;
-            margin-bottom: 50px;
-            padding: 20px;
-            background-color: rgba(212, 175, 55, 0.1);
-            border-left: 3px solid #D4AF37;
-            font-size: 0.95rem;
-        }
-
-        .structure-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-        }
-
-        .structure-card {
-            background-color: rgba(212, 175, 55, 0.05);
-            border: 1px solid #D4AF37;
-            padding: 30px;
-        }
-
-        .structure-card h3 {
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-        }
-
-        .structure-item {
-            margin-bottom: 16px;
-            font-size: 0.95rem;
-        }
-
-        .structure-item strong {
-            color: #D4AF37;
-            display: block;
-            margin-bottom: 4px;
-        }
-
-        /* CONTACT SECTION */
-        #contact {
-            padding: 100px 0;
-            text-align: center;
-            background-color: #0A1F2E;
-        }
-
-        #contact h2 {
-            margin-bottom: 30px;
-        }
-
-        #contact p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-
-        /* FOOTER */
-        footer {
-            background-color: rgba(0, 0, 0, 0.3);
-            padding: 40px 0;
-            text-align: center;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        footer p {
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-        }
-
-        /* MOBILE RESPONSIVE */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            #hero {
-                flex-direction: column;
-                padding: 60px 0;
-                gap: 40px;
-            }
-
-            section {
-                padding: 60px 0;
-            }
-
-            .board-grid,
-            .structure-grid {
-                gap: 30px;
-            }
-        }
-    </style>
+</script>
 </head>
 <body>
-    <!-- HERO SECTION -->
-    <section id="hero">
-        <div class="container" style="display: flex; align-items: center; gap: 60px;">
-            <div class="hero-content">
-                <h1>Satmoko Law Firm | CLO Anstalt Legal & Investment Counsel</h1>
-                <p class="subheadline">We structure deals to be VC-fundable. UK-ID Investment & Tech Compliance.</p>
-                <a href="https://wa.me/6580174461" class="cta-button">WhatsApp +65 8017 4461</a>
-            </div>
-            <div class="hero-image">
-  <img src="satmoko.png" alt="Bambang Satmoko, Founder">
-</div>
-        </div>
-    </section>
 
-    <!-- BOARD SECTION -->
-    <section id="board">
-        <div class="container">
-            <div class="board-heading">
-                <h2>Leadership With Legal & Investment Authority</h2>
-            </div>
-            <div class="board-grid">
-               <div class="board-card">
-  <div class="board-card-image">
-    <img src="sebastian.png" alt="Sebastian Kitt, Investor Advisor">
+<a class="skip-link" href="#main">Langsung ke konten</a>
+
+<div class="letterhead">
+  <div class="container">
+    <div>JAKARTA · SENIN–JUMAT 09.00–18.00 WIB</div>
+    <div class="lh-links">
+      <a href="mailto:contact@satmokolawfirm.id">contact@satmokolawfirm.id</a>
+      <a href="https://wa.me/6285692904399" target="_blank" rel="noopener">WA +62 856-9290-4399</a>
+    </div>
   </div>
-  <h3>Sebastian Kitt</h3>
-  <p><strong>Investor Advisor</strong></p>
-  <p>UK-ID Capital & Deal Structuring</p>
 </div>
 
-<div class="board-card">
-  <div class="board-card-image">
-    <img src="satmoko.png" alt="Bambang Satmoko, Founder & CLO">
+<nav class="mainnav">
+  <div class="container">
+    <a href="index.html" class="logo">SATMOKO <span>LAW FIRM</span></a>
+    <ul class="navlinks">
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="korporasi-investasi.html">Corporate &amp; Investment</a></li>
+      <li><a href="hukum-perdata.html">Private Client</a></li>
+      <li><a href="#regulasi">Keahlian Regulasi</a></li>
+      <li><a href="#oneos">One OS</a></li>
+      <li><a href="#insight">Insight</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+      <li class="lang-switch"><a class="active" href="index.html">ID</a><a href="index-en.html">EN</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">&#9776;</button>
   </div>
-  <h3>Bambang Satmoko</h3>
-  <p><strong>Founder & Chief Legal Officer</strong></p>
-  <p>Legal, Regulatory & Investment Counsel</p>
-</div>
+</nav>
 
-<div class="board-card">
-  <div class="board-card-image">
-    <img src="rachael.png" alt="Rachael Helmes, CLO Investo">
+<main id="main">
+
+  <section class="hero">
+    <div class="container">
+      <div>
+        <span class="ref-code mono-label reveal">JAKARTA · TECHNO LEGAL ARCHITECT</span>
+        <h1 class="reveal">Hukum, Keuangan, dan Teknologi, <em>dijembatani dalam satu praktik.</em></h1>
+        <p class="lead reveal">Kami menstrukturkan instrumen keuangan, tokenisasi RWA, dan tata kelola korporasi untuk bank, BUMN, dan investor — lalu mengoperasionalkannya lewat infrastruktur teknologi mitra kami agar setiap keputusan hukum bisa diaudit, dilacak, dan dipertanggungjawabkan.</p>
+        <div class="hero-actions reveal">
+          <a href="#kontak" class="btn btn-gold">Konsultasi RWA Gratis</a>
+          <a href="#layanan" class="btn btn-outline">Lihat Layanan</a>
+        </div>
+      </div>
+      <div class="seal-wrap reveal">
+        <svg class="seal" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="sealTitleId">
+          <title id="sealTitleId">Segel Satmoko Law Firm</title>
+          <circle class="outer" cx="130" cy="130" r="122"></circle>
+          <circle class="inner" cx="130" cy="130" r="98"></circle>
+          <line class="core-line" x1="130" y1="20" x2="130" y2="38"></line>
+          <line class="core-line" x1="130" y1="222" x2="130" y2="240"></line>
+          <line class="core-line" x1="20" y1="130" x2="38" y2="130"></line>
+          <line class="core-line" x1="222" y1="130" x2="240" y2="130"></line>
+          <path id="sealRingId" fill="none" d="M 130,130 m -110,0 a 110,110 0 1,1 220,0 a 110,110 0 1,1 -220,0"></path>
+          <text class="ring-text">
+            <textPath href="#sealRingId" xlink:href="#sealRingId" startOffset="2%">SATMOKO LAW FIRM · TECHNO LEGAL ARCHITECT · JAKARTA · </textPath>
+          </text>
+          <text class="monogram" x="130" y="126" text-anchor="middle" font-size="30">SLF</text>
+          <text class="estd" x="130" y="150" text-anchor="middle">CORPORATE · TRADE FINANCE · RWA</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="reg-ticker" aria-hidden="true">
+    <div class="track">
+      <span><b>UU P2SK</b> · Sektor Keuangan</span>
+      <span><b>POJK 27/2024</b> · Aset Digital</span>
+      <span><b>POJK No.26/2024</b> · LC & SKBDN</span>
+      <span><b>UCP 600 ICC</b> · Trade Finance</span>
+      <span><b>ISP 98</b> · Standby LC</span>
+      <span><b>UU ITE</b> · Transaksi Elektronik</span>
+      <span><b>UU PDP</b> · Perlindungan Data</span>
+      <span><b>UU P2SK</b> · Sektor Keuangan</span>
+      <span><b>POJK 27/2024</b> · Aset Digital</span>
+      <span><b>POJK No.26/2024</b> · LC & SKBDN</span>
+      <span><b>UCP 600 ICC</b> · Trade Finance</span>
+      <span><b>ISP 98</b> · Standby LC</span>
+      <span><b>UU ITE</b> · Transaksi Elektronik</span>
+      <span><b>UU PDP</b> · Perlindungan Data</span>
+    </div>
   </div>
-  <h3>Rachael Helmes</h3>
-  <p><strong>CLO, Investo Group</strong></p>
-  <p>0 Regulatory Failures in 10 Years</p>
-</div>
-            </div>
-        </div>
-    </section>
 
-    <!-- STRUCTURE SECTION -->
-    <section id="structure">
-        <div class="container">
-            <h2>Global Compliant Structure: Indonesia → Singapore → Liechtenstein</h2>
-            <div class="structure-disclaimer">
-                <p><strong>Formation in progress. Subject to closing of funding round.</strong></p>
-            </div>
-            <div class="structure-grid">
-                <div class="structure-card">
-                    <h3>Step 1: INVESTO ECOSYSTEM GROUP</h3>
-                    <div class="structure-item">
-                        <strong>Jurisdiction:</strong>
-                        To Be Established | Principality of Liechtenstein
-                    </div>
-                    <div class="structure-item">
-                        <strong>Form:</strong>
-                        Planned as Anstalt
-                    </div>
-                    <div class="structure-item">
-                        <strong>Role:</strong>
-                        Parent / Treasury / IP Holding / Token Issuance
-                    </div>
-                    <div class="structure-item">
-                        <strong>Benefit:</strong>
-                        OECD White-List. UBO Confidentiality. 12.5% Corporate Tax.
-                    </div>
-                </div>
-                <div class="structure-card">
-                    <h3>Step 2: ARSIVA AI</h3>
-                    <div class="structure-item">
-                        <strong>Jurisdiction:</strong>
-                        Indonesia
-                    </div>
-                    <div class="structure-item">
-                        <strong>Entity:</strong>
-                        PT Daltrans Teknologi Indonesia
-                    </div>
-                    <div class="structure-item">
-                        <strong>Brand:</strong>
-                        Garwa | Asset Management & Compliance Tools
-                    </div>
-                    <div class="structure-item">
-                        <strong>Status:</strong>
-                        Beta / POC Active
-                    </div>
-                </div>
-                <div class="structure-card">
-                    <h3>Step 3: SATMOKO LAW FIRM</h3>
-                    <div class="structure-item">
-                        <strong>Jurisdiction:</strong>
-                        Jakarta Selatan, Indonesia
-                    </div>
-                    <div class="structure-item">
-                        <strong>Status:</strong>
-                        Active | Licensed
-                    </div>
-                    <div class="structure-item">
-                        <strong>Role:</strong>
-                        Legal, Regulatory & Investment Counsel
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section class="trust-strip">
+    <div class="container">
+      <span class="t-label">Melayani</span>
+      <div class="t-items">
+        <span>Bank & Lembaga Keuangan</span>
+        <span>BUMN & Infrastruktur</span>
+        <span>Investor Asing (PMA)</span>
+        <span>Platform Fintech & RWA</span>
+        <span>High Net-Worth Individuals</span>
+      </div>
+    </div>
+  </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-        <div class="container">
-            <h2>Ready to De-Risk Your Next Deal?</h2>
-            <p>Jl. HR Rasuna Said, Jakarta Selatan, Indonesia. Investor WhatsApp: +65 8017 4461. Serving Indonesia & UK Investors.</p>
-            <a href="https://wa.me/6580174461" class="cta-button">WhatsApp +65 8017 4461</a>
+  <section id="layanan" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">6 Legal Solution OS</div>
+        <h2 class="section-title">Satu praktik hukum, enam modul yang saling terhubung</h2>
+        <p class="section-sub">Setiap layanan dirancang agar berbicara langsung dengan kebutuhan Direksi, Compliance, dan Investor — bukan sekadar nasihat hukum yang berdiri sendiri.</p>
+      </div>
+      <div class="grid grid-6">
+        <div class="card reveal">
+          <span class="num">01</span>
+          <h3>Litigation & Case Management OS</h3>
+          <p>Dashboard real-time untuk seluruh perkara litigasi, PHI, dan arbitrase. Laporan untuk RUPS dan Komisaris dalam satu klik.</p>
+          <a class="more" href="layanan/korporasi.html">Pelajari lebih lanjut →</a>
         </div>
-    </section>
+        <div class="card reveal">
+          <span class="num">02</span>
+          <h3>Legal Opinion & Due Diligence Suite</h3>
+          <p>Due diligence untuk RWA, M&A, dan kredit sindikasi, diselesaikan dalam 7 hari kerja dengan standar setara bank.</p>
+          <a class="more" href="layanan/korporasi.html">Pelajari lebih lanjut →</a>
+        </div>
+        <div class="card reveal">
+          <span class="num">03</span>
+          <h3>Financial Instrument Advisory</h3>
+          <p>Legal structuring untuk BG, LC, DLC, dan SBLC pada transaksi trade finance dan proyek infrastruktur lintas negara.</p>
+          <a class="more" href="layanan/financial-instrument.html">Pelajari lebih lanjut →</a>
+        </div>
+        <div class="card reveal">
+          <span class="num">04</span>
+          <h3>Wealth & Family Legal Protection</h3>
+          <p>Perjanjian pra-nikah, perencanaan waris, dan penyelesaian gono-gini dengan pendekatan bisnis dan kerahasiaan penuh.</p>
+          <a class="more" href="layanan/korporasi.html">Pelajari lebih lanjut →</a>
+        </div>
+        <div class="card flagship reveal">
+          <span class="num">05 · Andalan Kami</span>
+          <h3>RWA Legal Compliance Bridge</h3>
+          <p>Jembatan hukum antara UU P2SK, POJK 27, dan teknologi tokenisasi on-premise dari mitra teknologi kami — dari legal opinion sampai smart contract.</p>
+          <a class="more" href="layanan/rwa-compliance.html">Pelajari lebih lanjut →</a>
+        </div>
+        <div class="card reveal">
+          <span class="num">06</span>
+          <h3>Investment & Licensing Desk</h3>
+          <p>Perizinan PMA, BKPM, dan OSS untuk sektor RWA, fintech, dan infrastruktur, dari perencanaan sampai izin operasional terbit.</p>
+          <a class="more" href="layanan/korporasi.html">Pelajari lebih lanjut →</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <p>Satmoko Law Firm. A Legal & Compliance Division of INVESTO ECOSYSTEM GROUP. Future Parent Entity: Planned as Anstalt, Liechtenstein. Investor Contact: +65 8017 4461.</p>
+  <section id="oneos" class="section alt">
+    <div class="container">
+      <div class="bridge-block reveal">
+        <h2>Bukan sekadar pendapat hukum. <em>Kami membangun jembatannya sampai ke lapisan teknis.</em></h2>
+        <p>Infrastruktur on-premise dari mitra teknologi kami menghubungkan legal opinion, audit trail, dan smart contract dalam satu sistem — sehingga setiap kepatuhan yang kami rancang tetap dapat dipertanggungjawabkan di hadapan OJK, Bank, maupun Pengadilan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="regulasi" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">Keahlian Regulasi</div>
+        <h2 class="section-title">Kami bekerja di persimpangan regulasi keuangan, data, dan teknologi</h2>
+      </div>
+      <div class="reg-grid">
+        <div class="reg-badge reveal"><div class="code">UU P2SK</div><p>Pengembangan & Penguatan Sektor Keuangan — payung hukum ekosistem RWA dan aset digital.</p></div>
+        <div class="reg-badge reveal"><div class="code">POJK 27/2024</div><p>Ketentuan OJK terkait inovasi teknologi sektor keuangan dan aset digital.</p></div>
+        <div class="reg-badge reveal"><div class="code">POJK No.26/2024</div><p>Ketentuan penerbitan Letter of Credit dan SKBDN oleh bank di Indonesia.</p></div>
+        <div class="reg-badge reveal"><div class="code">UCP 600 (ICC)</div><p>Standar internasional untuk Letter of Credit dalam transaksi trade finance.</p></div>
+        <div class="reg-badge reveal"><div class="code">ISP 98</div><p>International Standby Practices — rujukan struktur Standby Letter of Credit.</p></div>
+        <div class="reg-badge reveal"><div class="code">UU ITE & UU PDP</div><p>Kepatuhan transaksi elektronik dan perlindungan data pribadi pada sistem berbasis teknologi.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="insight" class="section alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-eyebrow">Rekam Jejak</div>
+        <h2 class="section-title">Engagement Terpilih</h2>
+        <p class="section-sub">Ringkasan studi kasus dan testimoni klien sedang kami susun sesuai standar kerahasiaan klien perbankan dan korporasi.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="case-card reveal">
+          <div class="tag">RWA Tokenization</div>
+          <p class="body">Legal opinion untuk struktur SPV tokenisasi aset properti komersial.</p>
+          <p class="placeholder-note">Ringkasan engagement akan ditambahkan setelah persetujuan klien.</p>
         </div>
-    </footer>
+        <div class="case-card reveal">
+          <div class="tag">Trade Finance</div>
+          <p class="body">Review dan mark-up SBLC untuk proyek infrastruktur lintas negara.</p>
+          <p class="placeholder-note">Ringkasan engagement akan ditambahkan setelah persetujuan klien.</p>
+        </div>
+        <div class="case-card reveal">
+          <div class="tag">Case Management</div>
+          <p class="body">Implementasi dashboard perkara terintegrasi untuk legal in-house BUMN.</p>
+          <p class="placeholder-note">Ringkasan engagement akan ditambahkan setelah persetujuan klien.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak" class="cta">
+    <div class="container">
+      <h2>Mari petakan kebutuhan hukum Anda</h2>
+      <p>Sesi konsultasi awal 30 menit, gratis — untuk RWA, instrumen keuangan, maupun tata kelola korporasi.</p>
+      <a href="mailto:contact@satmokolawfirm.id" class="btn btn-gold">Hubungi Tim Kami</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand">SATMOKO <span>LAW FIRM</span></div>
+        <p>Techno Legal Architect — menjembatani hukum, keuangan, dan teknologi untuk bank, BUMN, dan investor di Indonesia.</p>
+        <p>Jakarta, Indonesia</p>
+      </div>
+      <div>
+        <h5>Tautan Cepat</h5>
+        <ul>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="korporasi-investasi.html">Corporate &amp; Investment Practice</a></li>
+          <li><a href="hukum-perdata.html">Private Client Practice</a></li>
+          <li><a href="layanan/rwa-compliance.html">RWA Compliance Bridge</a></li>
+          <li><a href="layanan/financial-instrument.html">Financial Instrument</a></li>
+          <li><a href="layanan/korporasi.html">Corporate Legal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Kontak</h5>
+        <ul>
+          <li><a href="mailto:contact@satmokolawfirm.id">contact@satmokolawfirm.id</a></li>
+          <li><a href="https://wa.me/6285692904399" target="_blank" rel="noopener">WA +62 856-9290-4399</a></li>
+          <li>Jakarta, Indonesia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Satmoko Law Firm. Seluruh hak cipta dilindungi.</span>
+      <span>Konten bersifat informasi umum, bukan pendapat hukum untuk kasus spesifik.</span>
+    </div>
+  </div>
+  <!-- CHATBOT WIDGET WILL BE ADDED HERE AFTER PHASE 2 -->
+</footer>
+
+<script src="assets/main.js"></script>
 </body>
 </html>
